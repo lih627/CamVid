@@ -1,7 +1,14 @@
 # CamVid
-CamVid original data set, and the generated 11 category labels and training grayscale images.
 
+> The Cambridge-driving Labeled Video Database (CamVid) is the first collection of videos with object class semantic labels, complete with metadata. The database provides ground truth labels that associate each pixel with one of [32 semantic classes](http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/#ClassLabels).
 
+This repository contains:
+
+- A backup for original CamVid dataset(32 category labels).
+- 11 category labels and training grayscale images for CamVid dataset.
+
+- Scripts to generate 11 cateogry labels from the original 32 category labels.
+- CamVid dataset split to train/va l/test set, which is the same as [SegNet](https://github.com/alexgkendall/SegNet-Tutorial).
 
 # Folder structure
 
@@ -13,7 +20,7 @@ CamVid original data set, and the generated 11 category labels and training gray
 └── CamVid_RGB # Original CamVid rgb image
 ```
 
-The original CamVid dataset image resolution is `960x720`. Other segmentation methods downsample it to `480x360`. I provide a higher resolution version.
+The original CamVid dataset image resolution is `960x720`. Some segmentation methods downsample it to `480x360` (SegNet/ENet). I provide a higher resolution version.
 
 
 
@@ -77,7 +84,7 @@ RGBLabel2LabelName = {
 
 # Labeling errors in CamVid
 
-There is a problem with `Seq05VD_f02610_L.png` annotation. For pixels rgb value that do not appear in the annotation category,  we set it as `Void`.
+There is a problem with `Seq05VD_f02610_L.png` annotation. For pixels RGB value that doe s not appear in the annotation category,  we set it as `Void`.
 
 There are detailds:
 
@@ -263,4 +270,4 @@ There are detailds:
 
 # Dataset Division
 
-see `camvid_data.py`  for details.
+Please see `camvid_data.py`  for details.
